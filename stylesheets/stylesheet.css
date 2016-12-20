@@ -1,20 +1,85 @@
-.project-name {
-  font-family: 'Raleway', sans-serif;
-  font-size: 100px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 500;
-  line-height: 26.4px;
-  text-align: center;
-  background: #2E4053;
-  color: #FFFFFF;
-  padding-top: 100px
+header{
+    text-align: center;
+    color: #FFF;
 }
 
 html{
-  background: #2E4053;
+     background: #2E4053;
 }
 
-.navbar-form{
-  min-width: 300px
+body{
+     background: #2E4053;
+}
+
+.title h1{
+    font-family: "Segoue", sans-serif;
+    line-height: 1.6em;
+    font-size: 50px;
+    font-style: bold;
+}
+
+.title p{
+    font-family: "Segoue", sans-serif;
+    line-height: 1.0em;
+    font-size: 20px;
+}
+
+#search-form {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.fieldcontainer {
+    display: block;
+    position: relative;
+    width: 90% margin: 0 auto;
+}
+
+section {
+    padding: 10px 10px 2px 20px;
+}
+
+#container {
+    width: 50%;
+    margin: auto;
+}
+
+.search-field {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 10px 7px;
+    padding-right: 20px;
+    background: #FFF;
+    color: #CCC;
+    border: 1px solid #C8C8C8;
+    font-size: 1.6em;
+    border-bottom-color: #D2E2E7;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 6px #F0F0F0;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 6px #F0F0F0;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 0 6px #F0F0F0;
+}
+
+#search-btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    height: 32px;
+    width: 32px;
+    border: 0;
+    cursor: pointer;
+    zoom: 1;
+    filter: alpha(opacity=65);
+    opacity: 0.65;
+    background: transparent url(../img/search.png) top left no-repeat;
+}
+
+#search-btn:hover {
+    filter: alpha(opacity=90);
+    opacity: 90;
 }
