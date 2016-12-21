@@ -12,28 +12,22 @@ function search() {
 
     // Get Form Input
     q = $('#query').val();
-
+    var searchURL = 'http://en.wikipedia.org/w/api.php?callback=?';
     // Run GET Request on API
-    $.get(
-        "https://en.wikipedia.org/w/api.php?action=query", {
-            format: 'json',
-            prop: 'extracts',
+    $.getJSON(searchURL, {
+            action: 'query',
             generator: 'search',
-            exsentences: '2',
-            exlimit: 'max',
-            exintro: '1',
-            explaintext: '1',
             gsrnamespace: '0',
-            gsrsearch: q
-        },
-        function(data) {
+            gsrsearch: q,
+            gsrlimit: '10',
+            prop: 'extracts',
+            exintro: '1',
+            exlimit: 'max',
+            exsentences: '2',
+            explaintext: '1',
+            format: 'json'
+        })
+        .done(function(data) {
             console.log(data);
-            /*$.each(data.items, function(i, item) {
-                // GetOutput
-                var output = getOutput(item);
-                // Display Results
-                $('#results').append(output);
-            });*/
-        }
-    );
+        });
 }
