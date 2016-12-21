@@ -12,7 +12,7 @@ function search() {
 
     // Get Form Input
     q = $('#query').val();
-    var searchURL = 'http://en.wikipedia.org/w/api.php?callback=?';
+    var searchURL = 'https://en.wikipedia.org/w/api.php?callback=?';
     // Run GET Request on API
     $.getJSON(searchURL, {
             action: 'query',
