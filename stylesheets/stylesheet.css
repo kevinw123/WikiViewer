@@ -96,8 +96,8 @@ li{
     cursor: pointer;
 }
 
-a: hover{
-    text-decoration: none;
+a:link{
+    text-decoration: none!important;
 }
 
 a {
