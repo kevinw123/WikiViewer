@@ -28,7 +28,7 @@ function search() {
             format: 'json'
         })
         .done(function(data) {
-            console.log(data);
+            //console.log(data);
             $.each(data.query.pages, function(i, item) {
                 // GetOutput
                 var output = getOutput(item);
@@ -45,20 +45,16 @@ function getOutput(item) {
     var pageId = item.pageid;
     var title = item.title;
     var extract = item.extract;
-    console.log(pageId);
-    console.log(title);
-    console.log(extract);
+    //console.log(pageId);
+    //console.log(title);
+    //console.log(extract);
     // Build Output String
-    var output = '<li>' +
-        '<div class="list-left">' +
-        '</div>' +
+    var output = '<li>' + 
         '<div class="list-right">' +
-        '<h3><a target="_blank" href="https://en.wikipedia.org/?curid=' + pageId + '">' + title + '</a></h3>' +
-        '<p>' + extract + '</p>' +
+        '<a target="_blank" href="https://en.wikipedia.org/?curid=' + pageId + '"><h3>' + title + '</h3>' +
+        '<p>' + extract + '</p></a>' +
         '</div>' +
-        '</li>' +
-        '<div class="clearfix"></div>' +
-        '';
+        '</li>';
 
     return output;
 }
