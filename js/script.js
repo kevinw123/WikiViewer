@@ -15,7 +15,7 @@ function search() {
 
     // Run GET Request on API
     $.get(
-        "http://en.wikipedia.org/w/api.php?action=query", {
+        "https://en.wikipedia.org/w/api.php?action=query", {
             format: 'json',
             prop: 'extracts',
             generator: 'search',
