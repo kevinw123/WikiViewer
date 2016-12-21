@@ -29,5 +29,36 @@ function search() {
         })
         .done(function(data) {
             console.log(data);
+            $.each(data.query.pages, function(i, item) {
+                // GetOutput
+                var output = getOutput(item);
+
+                // Display Results
+                $('#results').append(output);
+            });
         });
+}
+
+
+// Build Output
+function getOutput(item) {
+    var pageId = item.pageid;
+    var title = item.title;
+    var extract = item.extract;
+    console.log(pageId);
+    console.log(title);
+    console.log(extract);
+    // Build Output String
+    var output = '<li>' +
+        '<div class="list-left">' +
+        '</div>' +
+        '<div class="list-right">' +
+        '<h3><a target="_blank" href="https://en.wikipedia.org/?curid=' + pageId + '">' + title + '</a></h3>' +
+        '<p>' + extract + '</p>' +
+        '</div>' +
+        '</li>' +
+        '<div class="clearfix"></div>' +
+        '';
+
+    return output;
 }
