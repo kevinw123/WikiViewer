@@ -49,7 +49,7 @@ function getOutput(item) {
     //console.log(title);
     //console.log(extract);
     // Build Output String
-    var output = '<li>' + 
+    var output = '<li>' +
         '<div class="list-right">' +
         '<a target="_blank" href="https://en.wikipedia.org/?curid=' + pageId + '"><h3>' + title + '</h3>' +
         '<p>' + extract + '</p></a>' +
@@ -58,3 +58,10 @@ function getOutput(item) {
 
     return output;
 }
+
+$(document).ready(function() {
+    $("#randombtn").click(function() {
+        var randomURL = 'https://en.wikipedia.org/wiki/Special:Random';
+        window.open(randomURL);
+    });
+});
