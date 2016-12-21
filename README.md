@@ -2,4 +2,4 @@
 - Built with jQuery, JavaScript, HTML, CSS
 - Link: https://kevinw123.github.io/WikiViewer/
 
-![ScreenShot](/img/logo.png)
+![ScreenShot](/img/image.png)
